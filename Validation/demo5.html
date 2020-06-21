@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm" method="post">
+        First Name: <input type="text" name="ll"> <br>
+        Last Name: <input type="text" name="lname"> <br>
+        <input type="button" value="Submit" onclick="allletter(document.myForm.lname);allletter(document.myForm.ll)"> <br>
+        <input type="reset" value="Reset"> <br>
+        <p id="dis"></p>
+    </form>
+    <script>
+        function allletter(inputtxt){
+            var numbers=letters=/^[0-9a-zA-Z]+$/;
+            if(inputtxt.value.match(numbers)){
+                document.getElementById("dis").innerHTML="Your name have accepted";
+                return true;
+            }
+            else{
+                document.getElementById("dis").innerHTML="Please input number only";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

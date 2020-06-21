@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Code:<input type="text" name="id" id="id"><br>
+        Name:<input type="text" name="name" id="name"><br>
+        qty:<input type="text" name="qty" id="qty"><br>
+        Price:<input type="score" name="price" id="price"><br>
+        Discount:<input type="score" name="discount" id="discount"><br>
+        <input type="button" value="Submit" onclick="myFunction()">
+    </form>
+    <script>
+        function myFunction(){
+            var id,name,qty,price,discount;
+            id=document.getElementById("id").value;
+            id=parseInt(id);
+            name=document.getElementById("name").value;
+            qty=document.getElementById("qty").value;
+            qty=parseInt(qty);
+            price=document.getElementById("price").value;
+            price=parseFloat(price);
+            discount=document.getElementById("discount").value;
+            discount=parseInt(discount);
+
+            var total,payment;
+            total=price*qty;
+            payment=total-(total*discount)/100;
+            document.write("Code="+id+"<br>Name="+name+"<br>QTY"+qty+"Price="+price+"<br>Discount+"+discount
+            +"<br>Total="+total+"<br>Payment="+payment);
+        }
+    </script>
+</body>
+</html>

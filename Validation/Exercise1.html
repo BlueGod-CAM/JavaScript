@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm" method="post">
+        Name: <input type="text" name="name"> <br>
+        Email: <input type="email" name="email"> <br>
+        Telephone: <input type="text" name="number"> <br>
+        Regrading: <select name="re" id="">
+            <option value="General">General</option>
+        </select> <br> 
+        Message: <textarea name="text" id="" cols="30" rows="10"></textarea> <br>
+        <input type="button" onclick="myFunction(document.myForm.name, document.myForm.email,document.myForm.number)" value="Submit">
+    </form>
+    <script>
+       function myFunction(name,email,num){
+           var n=/^[a-zA-Z]+$/;
+           var e=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+           var number=/^[0-9]+$/;
+           if(name.value.match(n)&&email.value.match(e)&&num.value.match(number)){
+               document.write("Successful");
+           }
+           else{
+               document.write("Unsuccess");
+           }
+
+       }
+    </script>
+</body>
+</html>

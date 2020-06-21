@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Loop</h2>
+    <p id="demo"></p>
+    <script>
+        var i;
+        var txt="";
+        for(i=20;i>=1;i--){
+            if(i%2==0){
+                txt+="<font color=red>The Even is "+i+"<br>";
+            }
+            else{
+                txt+="<font color=blue>The odd is"+i+"<br>";
+            }
+        }
+        document.getElementById("demo").innerHTML=txt;
+    </script>
+</body>
+</html>

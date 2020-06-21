@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST" onsubmit="return Checkform(this);">
+        <p>User ID: <input type="text" maxlength="12" minlength="5" name="userid" required></p>
+        <p>Password: <input type="text" maxlength="12" min="7" name="pass" required></p>
+        <p>Name <input type="text" name="name"></p>
+        <p>Address: <input type="text" name="address"></p>
+        <p>Country <select name="country" id="">
+            <option value="">Please select a country</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Thailand">Thailand</option>
+        </select></p>
+        <p>
+            ZIP Code: <input type="text" pattern="[0-9]{4}" required>
+        </p>
+        <p>
+            Email: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        </p>
+        <p>
+            Sex: <input type="radio" name="sex" >Male
+                 <input type="radio" name="sex">
+        </p>
+        <p>
+            Language: <input type="checkbox" name="language[]" value="English"> English
+                        <input type="checkbox" name="language[]" value="Khmer">Khmer
+        </p>
+        <p>
+            About <textarea name="" id="" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+    <script>
+        function checkForm(form){
+            re=/^\[a-zA-Z]$/;
+            if(form.name.value==""&&!form.name.match(re)){
+                alert("Please Input a correct format");
+                form.name.focus();
+                return false;
+            }
+            if(form.country.value==""){
+                alert("Please Input a correct format");
+                form.country.focus();
+                return false;
+            }
+            if(form.sex.value==""){
+                alert("Please Input a correct format");
+                form.sex.focus();
+                return false;
+            }
+            if(form.language.value==""){
+                alert("Please Input a correct format");
+                form.language.focus();
+                return false;
+            }
+            alert("Correct");
+            return true;
+    </script>
+</body>
+</html>

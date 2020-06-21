@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="year"></button>
+    <button id="month"></button>
+    <button id="day"></button>
+    <button id="Hour"></button>
+    <button id="minute"></button>
+    <button id="second"></button>
+    <script>
+        var d=new Date();
+        document.getElementById("year").innerHTML=d.getFullYear();
+        document.getElementById("month").innerHTML=(d.getMonth()+1);
+        document.getElementById("day").innerHTML=d.getDate();
+        document.getElementById("Hour").innerHTML=d.getHours();
+        document.getElementById("Hour").innerHTML=d.getHours();
+        document.getElementById("minute").innerHTML=d.getMinutes();
+        document.getElementById("second").innerHTML=d.getSeconds();
+    </script>
+</body>
+</html>

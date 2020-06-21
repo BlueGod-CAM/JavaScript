@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST" name="myForm">
+        <p>Input <input type="text" size="32" name="input"></p>
+        <input type="button" onclick="myFunction(document.myForm.input)" value="Submit">
+    </form>
+    <script type="text/javascript">
+        function myFunction(form){
+            if(form.value==""){
+                alert("Error: Input Error");
+                form.inputfield.focus();
+                return false;
+            }
+            var re=/^[\w ]+$/;
+            if(!re.test(form.inputfield.value)){
+                alert("Error: Input contain invalid character");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+</body>
+</html>

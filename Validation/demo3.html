@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm" method="post">
+        First Name: <input type="text" name="fname"> <br>
+        <input type="button" value="Submit" onclick="allletter(document.myForm.fname); allletter(document.myForm.lname)"> <br>
+        Last Name: <input type="text" name="lname"> <br>
+        <input type="reset" value="Reset"> <br>
+        <p id="dis"></p>
+    </form>
+    <script>
+        function allletter(inputtxt){
+            var letters=/^[A-Za-z]+$/;
+            if(inputtxt.value.match(letters)){
+                alert("Your name have accepted : you can try another one");
+                return true;
+            }
+            else{
+                alert("Please input alphabet character only");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

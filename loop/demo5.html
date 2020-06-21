@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i;
+        var sum=0;
+        for(i=0;i<=10;i++){
+            sum=sum+i;
+        }
+        document.write("Sum1="+sum+"<br>");
+        document.write("<hr>");
+        sum=0;
+        for(i=0;i<=10;i++){
+            sum=sum+Math.pow(i,2);
+        }
+        document.write("Sum2="+sum+"<br>");
+        document.write("<hr>");
+        sum=0;
+        for(i=0;i<=10;i++){
+            sum=sum+Math.random();
+        }
+        document.write("Sum3="+sum+"<br>");
+        document.write("<hr>");
+    </script>
+</body>
+</html>

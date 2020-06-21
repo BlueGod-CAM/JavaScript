@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        First name: <input type="text" id="fname" > <br>
+        Last name: <input type="text" id="lname"> <br>
+        Country: <input type="text" id="country"> <br>
+        Subject: <input type="text" id="subject"> <br>
+        <input type="button" onclick="Show()" value="Submit">
+        <input type="button" onclick="Reset()" value="Reset">
+    </form>
+    <div id="demo">
+
+    </div>
+    
+    <script>
+        var arrayfname=[];
+        var arraylname=[];
+        var arraycountry=[];
+        var arraysubject=[];
+        function Add(){
+            var fname,lname,country,subject;
+            fname=document.getElementById("fname").value;
+            lname=document.getElementById("lname").value;
+            country=document.getElementById("country").value;
+            subject=document.getElementById("subject").value;
+            arrayfname[arrayfname.length]=fname;
+            arraylname[arraylname.length]=lname;
+            arraycountry[arraycountry.length]=country;
+            arraysubject[arraysubject.length]=subject;
+        }
+        
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getCheck(){
+            var radio=document.getElementById("demoForm");
+            var i,length;
+            for(i=0;i<radio.length;i++){
+                if(radio[i].checked){
+                    alert(radio[i].value);
+                    break;
+                }
+            }
+        }
+    </script>
+    <form action="" method="POST" class="demoForm" id="demoForm">
+        <fieldset>
+            <legend>Demo: Get Value of Selected</legend>
+            <p>Select a shipping method</p>
+        <p>
+            <label for=""><input type="radio" name="ship" value="std" checked>Standard Ground</label>
+            <label for=""><input type="radio" name="ship" value="2day" >Second Days</label>
+            <label for=""><input type="radio" name="ship" value="1day" >Overnight</label>
+            <label for=""><input type="radio" name="ship" value="hold" >Pick up</label>
+        </p> 
+        <p>
+            <button type="button" name="getVal" onclick="getCheck()">Get value of selected</button>
+        </p>
+        </fieldset>
+        
+    </form>
+    
+</body>
+</html>

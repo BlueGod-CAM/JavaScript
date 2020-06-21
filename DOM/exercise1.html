@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <p id="demo"></p>
+    <form action="">
+        X= <input type="number" id="x">
+        Y= <input type="number" id="y">
+    </form>
+    <div>
+        <button onclick="sum()">X+Y</button>
+        <button onclick="sub()">X-Y</button>
+        <button onclick="mul()">XxY</button>
+        <button onclick="div()">X/Y</button>
+        <button onclick="sqrt()">sqrt(x)</button>
+        <button onclick="pow()">x^2</button>
+        <button onclick="fac()">x!</button>
+        <button onclick="">MOD</button>
+        <button onclick="gcd()">GCD</button>
+        <button onclick="LCM()">LCM</button>
+    </div>
+    <script>
+        var x,y,result;
+        
+        function sum(){
+            x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+            document.getElementById("demo").innerHTML=(x+y);
+        }
+        function sub(){
+            x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+            document.getElementById("demo").innerHTML=(x-y);
+        }
+        function mul(){
+            x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+            document.getElementById("demo").innerHTML=(x*y);
+        }
+        function div(){
+            x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+            document.getElementById("demo").innerHTML=(x/y);
+        }
+        function sqrt(){
+            x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+            result=Math.sqrt(x);
+            document.getElementById("demo").innerHTML=result;
+        }
+        function pow(){
+            x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+            result=Math.pow(x,2);
+            document.getElementById("demo").innerHTML=result;
+        }
+        function fac(){
+            x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+            var i,j,k=1;
+            for(i=1;i<=x;i++){
+                k*=i;
+            }
+            result=k;
+            document.getElementById("demo").innerHTML=result;
+        }
+       function gcd(){
+        x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+           var j=1,i,k;
+           if(x>y){
+                k=x;
+           }
+           else{
+               k=y;
+           }
+           for(i=1;i<=k;i++){
+               if(x%i==0&&y%i==0){
+                   if(i<j){
+                       j=i;
+                   }
+               }
+           }
+           result=j;
+
+           document.getElementById("demo").innerHTML=result;
+       } 
+       function LCM(){
+        x=document.getElementById("x").value;
+        y=document.getElementById("y").value;
+        x= parseInt(x);
+        y= parseInt(y);
+        var j=1,i,k;
+           if(x>y){
+                k=x;
+           }
+           else{
+               k=y;
+           }
+           for(i=1;i<=k;i++){
+               if(x%i==0&&y%i==0){
+                   if(i>j){
+                       j=i;
+                   }
+               }
+           }
+           result=j;
+
+           document.getElementById("demo").innerHTML=result;
+       }
+    </script>
+</body>
+</html>

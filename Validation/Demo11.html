@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkForm(form){
+            re=/^\d[1,2]\/d{1,2}\/\d{4}$/;
+            if(form.startdate.value==""&&!form.startdate.value.match(re)){
+                alert("Invalid Date format:"+form.startdate.value);
+                form.startdate.focus();
+                return false;
+            }
+            re=/^\d[1,2]:\d{2}([ap]m)?$/;
+            if(form.starttime.value==""&&!form.starttime.value.match(re)){
+                alert("Invalid Date format:"+form.starttime.value);
+                form.starttime.focus();
+                return false; 
+            }
+            alert("All input field have been validated!");
+            return true;
+        }
+    </script>
+    <form action="" method="POST" onsubmit="return checkForm(this);">
+        <fieldset>
+            <label for="">Start Date: <br>
+            <input type="text" size="12" placeholder="dd/mm/yyyy" name="startdate">
+            </label> <br>
+            <label for="">Start Time
+                <br>
+                <input type="text" size="12" pattern="\d{1,2}:\d{2}([ap]m)?" name="starttime">
+            </label><br>
+            <p><input type="submit" value="Submit"></p>
+        </fieldset>
+    </form>
+</body>
+</html>

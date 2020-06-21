@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="..." onsubmit="return checkForm(this);">
+        <fieldset>
+        <legend>Change Password</legend>
+        <p>Username: <input title="Enter your username" type="text" required pattern="\w+" name="username"></p>
+        <p>Password: <input title="Password must contain at least 6 characters, including UPPER/lowercase and numbers" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" onchange="
+          this.setCustomValidity(this.validity.patternMismatch ? this.title : '');
+          if(this.checkValidity()) form.pwd2.pattern = RegExp.escape(this.value);
+        "></p>
+        <p>Confirm Password: <input title="Please enter the same Password as above" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd2" onchange="
+          this.setCustomValidity(this.validity.patternMismatch ? this.title : '');
+        "></p>
+        <p><input type="submit" value="Save Changes"></p>
+        </fieldset>
+        </form>
+</body>
+</html>

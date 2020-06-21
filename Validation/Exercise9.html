@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .valid{
+            display: none;
+        }
+        .invalid{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+                <label for="Username">Username:</label>
+                <input type="text" class="form-control" name="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="text" id="pwd" class="form-control" name="Password" required pattern="">
+                <div id="message">
+                    <small> <b>Note:</b> </small>
+                    <small id="lower" class="invalid">A lower case letter,</small> 
+                    <small id="upper" class="invalid">A Upper case letter,</small>
+                    <small id="number" class="invalid">A number,</small>
+                    <small id="length" class="invalid">Minimum 8 character,</small>
+                </div>
+            </div>
+            <div class="form-group-btn">
+                <input type="submit" value="Submit" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+    <script>
+        password=document.getElementById("pwd");
+        lower=document.getElementById("lower");
+        upper=document.getElementById("upper");
+        number=document.getElementById("number");
+        length=document.getElementById("length");
+        password.onkeyup=function(){
+            var re=/[a-z]/g;
+            if(password.value.match(re)){
+                lower.classList.remove("invalid");
+                lower.classList.add("valid");
+            }
+            else{
+                lower.classList.remove("valid");
+                lower.classList.add("invalid");
+            }
+            up=/[A-Z]/g;
+            if(password.value.match(up)){
+                upper.classList.remove("invalid");
+                upper.classList.add("valid");
+            }
+            else{
+                upper.classList.remove("valid");
+                upper.classList.add("invalid");
+            }
+            num=/[0-9]/g;
+            if(password.value.match(num)){
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            }
+            else{
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }
+            var min=8;
+            if(password.value.length>=8){
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            }
+        }
+
+    </script>
+</body>
+</html>

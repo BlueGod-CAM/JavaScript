@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Score1:<input type="number" name="s1" id="score1"><br>
+        Score2:<input type="number" name="s2" id="score2"><br>
+        Score3:<input type="number" name="s3" id="score3"><br>
+        Score4:<input type="number" name="s4" id="score4"><br>
+        Score5:<input type="number" name="s5" id="score5"><br>
+        <input type="button" value="Submit" onclick="myFunction()">
+    </form>
+    <script>
+        function myFunction(){
+            var s1,s2,s3,s4,s5;
+            s1=document.getElementById("score1").value;
+            s1=parseFloat(s1);
+            s2=document.getElementById("score2").value;
+            s2=parseFloat(s2);
+            s3=document.getElementById("score3").value;
+            s3=parseFloat(s3);
+            s4=document.getElementById("score4").value;
+            s4=parseFloat(s4);
+            s5=document.getElementById("score5").value;
+            s5=parseFloat(s5);
+            var total,average;
+            total=(s1+s2+s3+s4+s5);
+            average=total/5;
+            document.write("Score1="+s1+"<br>Score2="+s2+"<br>Score3="+s3+"<br>Score4="+s4+"<br>Score5="+s5+"<br>Total="+total+"<br>Average="+average);
+        }
+    </script>
+</body>
+</html>

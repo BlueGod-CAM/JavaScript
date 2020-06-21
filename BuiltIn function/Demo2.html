@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Date Format</h2>
+    <p id="demo"></p>
+    <script>
+        var myDate= new Date("October 21, 2018");
+        var date=myDate.getDate();
+        var month=myDate.getMonth();
+        var year=myDate.getFullYear();
+        function pad(n){
+            return n<10?'0'+n:n
+        }
+        var ddmmyy=pad(date)+"/"+pad(month+1)+"/"+year;
+        document.getElementById("demo").innerHTML="Today is"+ddmmyy;
+    </script>
+</body>
+</html>

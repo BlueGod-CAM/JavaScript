@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        ID:<input type="text" name="id" id="id"><br>
+        Name:<input type="text" name="name" id="name"><br>
+        Gender:<input type="text" name="sex" id="sex"><br>
+        Score:<input type="score" name="score" id="score"><br>
+        <input type="button" value="Submit" onclick="myFunction()">
+    </form>
+    <script>
+        function myFunction(){
+            var id,name,sex,score;
+            id=document.getElementById("id").value;
+            name=document.getElementById("name").value;
+            sex=document.getElementById("sex").value;
+            score=document.getElementById("score").value;
+            document.write("ID="+id+"<br>Name="+name+"<br>Gender="+sex+"<br>Score="+score);
+        }
+    </script>
+</body>
+</html>

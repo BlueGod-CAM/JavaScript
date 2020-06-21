@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        First name: <input type="text" id="fname" > <br>
+        Last name: <input type="text" id="lname"> <br>
+        Email: <input type="text" id="email">
+        <input type="button" onclick="Show()" value="Submit">
+        <input type="button" onclick="Reset()" value="Reset">
+    </form>
+    <div id="demo">
+
+    </div>
+    
+    <script>
+        function Show(){
+            var fname,lname;
+            fname=document.getElementById("fname").value;
+            lname=document.getElementById("lname").value;
+            var name;
+            name= fname+" "+lname;
+
+            document.getElementById("demo").innerHTML="<p>"+name+"</p>";
+        }
+        function Reset(){
+            var fname,lname,email;
+            fname=document.getElementById("fname").value;
+            lname=document.getElementById("lname").value;
+            email=document.getElementById("email").value;
+            var result="<table>";
+            result+="<tr>";
+            result+="<th>First Name</th>";
+            result+="<th>Last Name</th>";
+            result+="<th>Email</th>";
+            result+="</tr>";
+            result+="<tr>";
+            result+="<td>"+fname+"</td>";
+            result+="<td>"+lname+"</td>";
+            result+="<td>"+email+"</td>";
+            result+="</tr>";
+            result+="</table>";
+            document.getElementById("demo").innerHTML=result;
+        }
+    </script>
+
+</body>
+</html>

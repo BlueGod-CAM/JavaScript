@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST" onsubmit="return checkkForm();">
+        <fieldset>
+            <legend>Event Details:</legend>
+            <label for="">Start Date: <br>
+            <input type="text" size="12" required pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yy" name="Start date"> 
+            </label> <br>
+            <label for="">
+                Start Time: <br> <input type="text" size="12" pattern="\d{1,2}:\d{2}([ap]m)?" name="Start time">
+            </label> <br>
+            <p><input type="submit" value="submit"></p>
+        </fieldset>
+    </form>
+</body>
+</html>

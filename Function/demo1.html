@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Myfunction1(){
+            var x,y;
+            x=10;
+            y=20;
+            return x+y;
+        }
+        function Myfunction2( x,y){
+            return  x+y;
+        }
+        function Myfunction3(x,y,z){
+            return x+y+z;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" onclick="Myfunction1()" value="call function 1">
+        <input type="button" onclick="Myfunction2(12,31)" value="call function 2">
+        <input type="button" onclick="Myfunction3(1,2,3)" value="call function 3">
+    </form>
+</body>
+</html>

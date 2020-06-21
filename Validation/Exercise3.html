@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm" >
+        Card Number: <input type="text" name="cn" width="250"> <br>
+        Expiry Date: <br>
+        <input type="text" placeholder="Month" name="month" width="100" style="margin-right: 25px;"> <br>
+        <input type="text" placeholder="Year" name="year" width="100" style="margin-right: 25px;"> <br>
+        Security Code:
+        <input type="text" name="sc"> <br>
+        <input type="button"  value="Submit" onclick="myFunction(document.myForm.cn,document.myForm.month,document.myForm.year,document.myForm.sc)">
+    </form>
+    <script>
+        function myFunction(card,month,year,security){
+            var c=/^[0-9]+$/;
+            var m=/^[a-zA-Z]+$/;
+            var y=4;
+            document.write(year.value.length);
+            if(card.value.match(c)&&month.value.match(m)&&security.value.match(c)&&year.value.length<=4){
+                document.write("Success");
+            }
+            else{
+                document.write("Unsuccess");
+            }
+        }
+    </script>
+</body>
+</html>

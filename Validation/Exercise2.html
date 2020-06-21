@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm" >
+        Password: <input type="password" name="password"> <br>
+        Confirm Password: <input type="password" name="cpass"> <br>
+        <input type="button" onclick="myFunction(document.myForm.password,document.myForm.cpass)" value="Submit">
+    </form>
+    <script>
+        function myFunction(pass,cpass){
+            var password=/^[a-zA-Z]+$/;
+            if(pass.value.match(password)&&cpass.value.match(password)){
+                document.write("Success");
+            }
+            else{
+                document.write("Unsuccess");
+            }
+        }
+    </script>
+</body>
+</html>

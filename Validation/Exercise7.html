@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="..." onsubmit="return checkForm(this);">
+        <fieldset>
+        <p>Name: <input title="Enter your username" type="text" required pattern="[A-Za-Z]" name="username"></p>
+        <p>Email: <input title="You have to input email" type="email" required pattern="/w+" name="pwd1" onchange="
+          form.pwd2.pattern = RegExp.escape(this.value);
+        "></p>
+        <p>Password: <input title="Please enter the same Password as above" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd2" onchange="
+          this.setCustomValidity(this.validity.patternMismatch ? this.title : '');
+        "></p>
+        <p>Address: <input title="Enter your username" type="text" required pattern="[A-Za-Z]" name="address"></p>
+        <p>Telephone: <input type="text" pattern="[0-9]" required></p>
+        <p><input type="submit" value="Save Changes"></p>
+        </fieldset>
+        </form>
+</body>
+</html>
+</body>
+</html>

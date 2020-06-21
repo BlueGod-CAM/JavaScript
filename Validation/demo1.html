@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <form action="" name="myForms" onsubmit="return validateForm()" method="POST">
+    First Name: <input type="text" name="fname"> <br>
+    <input type="submit" value="Submit"> <br>
+    Last Name: <input type="text" name="lname"> <br>
+    <input type="reset" value="Reset"> <br>
+    <p id="dis"></p>
+    </form>
+    <script>
+        function validateForm(){
+            var fname=document.forms["myForms"]["fname"].value;
+            var lname=document.forms["myForms"]["lname"].value;
+            if(fname==""||lname==""){
+                document.getElementById("dis").innerHTML="Please input value first...";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

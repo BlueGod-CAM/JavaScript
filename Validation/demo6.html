@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm" method="post">
+        First Name: <input type="text" name="fname"> <br>
+        Last Name: <input type="text" name="lname"> <br>
+        <input type="button" value="Submit" onclick="allletter(document.myForm.fname,1,10); allletter(document.myForm.lname,1,10)"> <br>
+        <input type="reset" value="Reset"> <br>
+        <p id="dis"></p>
+    </form>
+    <script>
+        function allletter(inputtxt,minlength,maxlength){
+            var field=inputtxt.value;
+            var mnlen=minlength;
+            var mxlen=maxlength;
+
+            if(field.length<mnlen||field.length>mxlen){
+                document.getElementById("dis").innerHTML="Please input the user id between "+mnlen+" and "+mxlen;
+                return false;
+            }
+            else{
+                document.getElementById("dis").innerHTML="Your userid have accepted";
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
